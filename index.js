@@ -1,11 +1,5 @@
 const copyObjectDeep = (target) => {
   if (target === null || typeof target !== "object") {
-    if (typeof target === "function") {
-      // 함수 복사
-      return function (...args) {
-        return target.apply(this, args);
-      };
-    }
     return target;
   }
 
